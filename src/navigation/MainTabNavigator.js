@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import ChatsScreen from "../screens/ChatsScreen";
 import NotImplementedScreen from "../screens/NotImplementedScreen";
-import {Ionicons} from "@expo/vector-icons"
+import {Ionicons, Entypo} from "@expo/vector-icons"
 
 const Tab = createBottomTabNavigator();
 
@@ -47,6 +47,9 @@ const MainTabNavigator = () => {
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <Ionicons name="ios-chatbubbles-sharp" size={size} color={color} />
+                    ),
+                    headerRight: ()=> (
+                        <Entypo name="new-message" size={18} color={"royalblue"} style={{ marginRight: 15 }}/>
                     ),
                 }}
             />
